@@ -31,9 +31,9 @@ importDirective(Vue)
 
 /* eslint-disable no-new */
 new Vue({
-  el: '#app',
-  router,
-  i18n,
-  store,
+  el: '#app',//与index.html中的<div id="app"></div>绑定
+  router,//路由配置
+  i18n,//国际化
+  store,//vuex
   render: h => h(App)
 })

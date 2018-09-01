@@ -18,11 +18,11 @@ export default {
   data () {
     return {
       columns: [
-        {title: 'Name', key: 'name', sortable: true},
-        {title: 'Email', key: 'email', editable: true},
-        {title: 'Create-Time', key: 'createTime'},
+        {title: '名称', key: 'name', sortable: true},
+        {title: '邮箱', key: 'email', editable: true},
+        {title: '创建时间', key: 'createTime'},
         {
-          title: 'Handle',
+          title: '操作',
           key: 'handle',
           options: ['delete'],
           button: [

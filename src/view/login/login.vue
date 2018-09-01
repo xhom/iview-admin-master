@@ -18,6 +18,8 @@
 <script>
 import LoginForm from '_c/login-form'
 import { mapActions } from 'vuex'
+import Main from '@/view/main'
+import page404 from '@/view/error-page/404.vue'
 export default {
   components: {
     LoginForm
@@ -30,6 +32,31 @@ export default {
     handleSubmit ({ userName, password }) {
       this.handleLogin({ userName, password }).then(res => {
         this.getUserInfo().then(res => {
+
+          const routers = [{
+            path: '/a',
+            name: 'a',
+            component: Main,
+            meta: {
+              title: 'AAA'
+            },
+            children: [
+              {
+                path: 'b',
+                name: 'b',
+                meta: {
+                  icon: 'md-flower',
+                  title: 'BBB'
+                },
+                component: page404
+              }
+            ]
+          }]
+
+          this.$router.addRoutes(routers);//调用
+
+          console.log('router->',this.$router)
+
           this.$router.push({
             name: 'home'
           })

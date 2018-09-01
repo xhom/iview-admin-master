@@ -38,7 +38,7 @@ router.beforeEach((to, from, next) => {
 })
 
 router.afterEach(to => {
-  iView.LoadingBar.finish()
+  iView.LoadingBar.finish() //顶部的进度条
   window.scrollTo(0, 0)
 })
 

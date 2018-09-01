@@ -293,7 +293,7 @@ export default [
     path: '/argu',
     name: 'argu',
     meta: {
-      hideInMenu: true
+      hideInMenu: false
     },
     component: Main,
     children: [
@@ -342,5 +342,34 @@ export default [
       hideInMenu: true
     },
     component: () => import('@/view/error-page/404.vue')
+  },
+
+  {
+    path: '/mycomp',
+    name: 'mycomp',
+    meta: {
+      title:'我的组件'
+    },
+    component: Main,
+    children: [
+      {
+        path: 'singleTable',
+        name: 'singleTable',
+        meta: {
+          icon: 'md-flower',
+          title: '单表DEMO'
+        },
+        component: () => import('@/view/argu-page/params.vue')
+      },
+      {
+        path: 'singleTable',
+        name: 'singleTable',
+        meta: {
+          icon: 'md-flower',
+          title: '单表DEMO'
+        },
+        component: () => import('@/view/argu-page/params.vue')
+      }
+    ]
   }
 ]
